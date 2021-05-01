@@ -3,6 +3,11 @@ import * as yargs from 'yargs';
 import {spawn} from 'child_process';
 import * as fs from 'fs';
 
+/**
+ * Funcion que obtiene la informacion del fichero de texto (lineas, palabras y letras) usando el metodo pipe para formar la salida del programa.
+ * @param path Ruta del fichero.
+ * @param options Opciones que modifican la visualizacion de la informacion.
+ */
 function getInfoPipe(path: string, options: string[]) {
     fs.access(path, (err) => {
         if (err) {

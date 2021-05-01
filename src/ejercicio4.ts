@@ -3,6 +3,10 @@ import * as yargs from 'yargs';
 import {spawn} from 'child_process';
 import * as fs from 'fs';
 
+/**
+ * Funcion que comprueba segun una ruta dada si es fichero o directorio.
+ * @param path Ruta a verificar.
+ */
 function verifyDir(path: string) {
     fs.access(path, (err) => {
         if (err) {
@@ -20,6 +24,10 @@ function verifyDir(path: string) {
         }
     });
 }
+/**
+ * Funcion para crear directorios usando el metodo mkdir de fs.
+ * @param path Ruta donde crear el directorio.
+ */
 function makeDir(path: string) {
     fs.access(path, (err) => {
         if (!err) {
@@ -37,6 +45,10 @@ function makeDir(path: string) {
         }
     });
 }
+/**
+ * Funcion que lista el contenido de un directiorio haciendo uso del comando ls.
+ * @param path Ruta que se desea listar su contenido.
+ */
 function listDir(path: string) {
     fs.access(path, (err) => {
         if (err) {
@@ -48,6 +60,10 @@ function listDir(path: string) {
         }
     });
 }
+/**
+ * Funcion que muestra el contenido de un fichero por consola haciendo uso el comando cat.
+ * @param path Ruta del fichero que se desea visualizar.
+ */
 function catDir(path: string) {
     fs.access(path, (err) => {
         if (err) {
@@ -66,6 +82,10 @@ function catDir(path: string) {
         }
     });
 }
+/**
+ * Funcion que elimina un fichero o directorio (incluyendo su contenido) haciendo uso el comando rm.
+ * @param path Ruta del fichero o directorio que se desea eliminar.
+ */
 function removeDir(path: string) {
     fs.access(path, (err) => {
         if (err) {
@@ -84,6 +104,12 @@ function removeDir(path: string) {
         }
     });
 }
+/**
+ * Funcion que copia un fichero o directorio (incluyendo su contenido) de una ruta inicial y lo pega en una ruta final, 
+ * haciendo uso del comando cp.
+ * @param pathinit Ruta del fichero o directorio a copiar.
+ * @param pathend Ruta donde se desea pegar el fichero o directorio.
+ */
 function copyDir(pathinit: string, pathend: string) {
     fs.access(`${pathinit}`, (err) => {
         if (err) {

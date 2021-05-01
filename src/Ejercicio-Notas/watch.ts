@@ -2,7 +2,12 @@ import chalk = require('chalk');
 import * as fs from 'fs';
 import yargs = require('yargs');
 
-
+/**
+ * Funcion que actua como un observador para la ruta del usuario dada, esta funcion muestra por consola
+ * cambios como la eliminacion de un fichero, la modificacion de un fichero y agregar un fichero nuevo dentro
+ * del directorio.
+ * @param path Ruta del directorio del usuario (notas/user);
+ */
 function watch (path: string) {
     fs.access(path, (err) => {
         if(err) {
