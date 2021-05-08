@@ -10,4 +10,4 @@ Para probar el ejercicio del chat, se debe abrir el servidor en una terminal con
 
 El codigo de las pruebas esta en `tests/Presencial/pruebas.spec.ts`.
 
-[Informe GitHub Pages]()
+[Informe GitHub Pages](https://ull-esit-inf-dsi-2021.github.io/ull-esit-inf-dsi-20-21-prct10-async-sockets-alu0101281308/)
