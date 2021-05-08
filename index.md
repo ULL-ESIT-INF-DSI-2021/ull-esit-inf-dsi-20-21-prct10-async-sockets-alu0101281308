@@ -1,19 +1,23 @@
-![Logo](img/logo.png)
+![Logo](img/ull.png)
 
 #### Ingeniería Informática
 #### Desarrollo de sistemas informáticos
 #### Elvis Nogueiras alu0101281308@ull.edu.es
 
-# Práctica 8 - Aplicación de procesamiento de notas de texto
+# Práctica 10 - Cliente y servidor para una aplicación de procesamiento de notas de texto
 
 ## Introducción
 En esta práctica tendrá que partir de la implementación de la aplicación de procesamiento de notas de texto que llevó a cabo en la Práctica 8 para escribir un servidor y un cliente haciendo uso de los sockets proporcionados por el módulo net de Node.js.
 
-## Funcionamiento
+## Funcionamiento Ejercicio Notas
 
 Para inciar el servidor se debe ejecutar en una terminal dentro del directorio raiz : `npm run sserver`
 Para usar la aplicacion de notas como cliente se debe ejecutar en otra terminar el comando : `node dist/Ejercicio-Notas/client.js [add, remove, list, update, read] --[atributos segun sea el caso]`
 ejemplo : `node dist/Ejercicio-Notas/client.js add --user=Elvis --title="nota 3" --body="prueba nota 3" --color=red`
+
+## Funcionamiento Ejercicio Presencial chat
+
+Para probar el ejercicio del chat, se debe abrir el servidor en una terminal con : `npm run pserver` y en otra terminal abrir el cliente y enviar por linea de comandos el mensaje con el comando `msn`, ejemplo :`node dist/Presencial/cliente.ts msn --mensaje="Hola mundo"`, Si todo ha salido correctamente, el mensaje se guarda en un fichero llamado `Historial.txt` en el directorio raiz del proyecto.
 
 ## Objetivos
 Las operaciones que podrá solicitar el cliente al servidor deberán ser las mismas que ya implementó durante la Práctica 8, esto es, añadir, modificar, eliminar, listar y leer notas de un usuario concreto. Un usuario interactuará con el cliente de la aplicación, exclusivamente, a través de la línea de comandos. Al mismo tiempo, en el servidor, las notas se almacenarán como ficheros JSON en el sistema de ficheros y siguiendo la misma estructura de directorios utilizada durante la Práctica 8.
